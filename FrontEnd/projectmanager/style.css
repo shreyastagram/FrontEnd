@@ -32,3 +32,8 @@ label{
     font-weight:bolder;
     margin:10px 0;
 }
+@media(max-width:400px){
+    form{
+        width:80%;
+    }
+}
