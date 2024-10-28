@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+h4{
+    margin-left:11px;
+    font-size:20px;
+}
+.header{
+    background-color:#186CA3;
+    color:white;
+    width:100%;
+    padding:20px;
+    border-bottom: 2px solid #134C7A;
+    font-size:x-large
+}
+#hamburger{
+    font-size:30px;
+    cursor:pointer;
+    padding:10px;
+}
+body{
+    font-family:sans-serif;
+    width:100%;
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.container{
+    display:flex;
+    flex:1;
+    height:calc(100vh-80px);
+    
+}
+
+.menu{
+    width:20%;
+    padding:5%;
+    background-color:grey;
+    color:white;
+}
+
+.board-form{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+
+#newBoardText{
+    padding:1%;
+    
+    border:1px solid;
+    margin-bottom:15px;
+    height:50px;
+    
+}
+.content{
+    width:80%;
+    padding:10px;
+}
+#searchBoard{
+    width:80%;
+    margin-left:14px;
+    padding:12px;
+    font-size:14px;
+}
+#add-board-btn{
+    background-color:rgb(31, 138, 31);
+    padding:1%;
+    border:1px solid green;
+    margin:0 85px 0 10px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    height:50px;
+}
+.project-card{
+
+    width:40%;
+    height:150px;
+    padding:2%;
+    font-size:18px;
+    background-color:grey;
+    border-radius:5px;
+    color:white;
+    margin:10px 10px;
+    
+}
+.project-block{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
