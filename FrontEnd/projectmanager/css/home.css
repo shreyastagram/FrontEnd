@@ -1,0 +1,397 @@
+
+h4 {
+    margin-left: 11px;
+    font-size: 20px;
+}
+
+
+
+#hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+
+.container {
+    display: flex;
+    flex: 1;
+    position:relative;
+    margin-left:23%;
+    margin-top:25px;
+}
+
+.menu {
+    width: 20%;
+    padding: 1%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    height: 100%;
+    overflow-y:auto;
+    position:fixed;
+    margin-top:25px;
+    left:0;
+    max-height:100%;
+
+    
+    overflow-x:hidden;
+}
+.menu.hidden{
+    display:none;
+}
+.container.menu-hidden{
+    margin-left:0;
+}
+
+
+
+.board-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#newBoardText {
+    padding: 1%;
+    border: 1px solid;
+    height: 50px;
+    min-width: 200px;
+}
+
+.add-board-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    padding: 10px;
+    padding-top:60px;
+}
+
+#searchBoard {
+    width: 80%;
+    margin-left: 14px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+#add-board-btn {
+    background-color: rgb(31, 138, 31);
+    padding: 1%;
+    border: 1px solid black;
+    margin: 0 85px 0 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    flex-shrink: 0;
+    height: 50px;
+}
+
+.project-card {
+    width: 30%;
+    padding: 2%;
+    font-size: 18px;
+    background-color: grey;
+    border-radius: 7px;
+    color: white;
+    margin: 10px 23px 0 23px;
+}
+
+.project-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.board-block {
+    margin-top: 2%;
+    display: none;
+    flex-wrap: wrap;
+    transition:opacity 1s ease;
+}
+.board-block.hidden{
+    opacity:0;
+    pointer-events:none;
+}
+
+#removeBoards {
+    background-color: red;
+    color: #fff;
+    margin: 0 9% 0 0;
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    cursor:pointer;
+}
+
+.board-name {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 20px;
+    max-width:100%;
+    overflow-wrap:break-word;
+    word-break:break-word;
+    white-space:normal;
+
+}
+.board-name::before{
+    content: "•";          
+    color: rgb(26, 24, 24);       
+    font-size: 20px; 
+    margin-left:10px;     
+    margin-right: 10px;     
+    position: absolute;     
+    left: 0;  
+}
+#hideall {
+    font-size: 22px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+#hide {
+    font-size: 16px;
+    margin: 0;
+    color: rgb(1, 1, 1);
+    background-color: rgb(216, 196, 196);
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor:pointer;
+}
+#show {
+    font-size: 16px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgb(216, 178, 178);
+    width: 150px;
+    height: 30px;
+    border: 2px solid rgb(196, 160, 160);
+    border-radius: 7px;
+    cursor:pointer;
+}
+.task-list {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+#menuList{
+    
+    padding:0;
+    margin-left:10px;
+    margin-right:10px;
+    list-style-type: none;
+    
+}
+
+#menuList li {
+
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+    flex-wrap: wrap;
+    overflow:hidden;
+    
+}
+
+#menuList li:hover {
+    background-color: rgb(148, 137, 137);
+    cursor: pointer;
+}
+.hidden{
+    display:none;
+}
+#menuList li::before {
+    content: "•";          
+    color:black;  
+      
+    font-size: 25px; 
+      
+    margin-right: 10px;     
+    position: absolute;     
+                  
+}
+
+/*Media Queries Below*/
+
+/* General mobile layout */
+@media (max-width: 768px) {
+    /* Title stays on top */
+    .header {
+        position: static;
+        width: 100%;
+        font-size: large;
+        padding: 10px;
+    }
+
+    /* Menu takes up minimal space */
+    .menu {
+        width: 100%;
+        max-height: 200px;
+        padding: 10px;
+        overflow-y: auto;
+        margin-top: 0;
+        background-color: #ccc;
+        position: static;
+    }
+
+    /* Container layout for single-column stacking */
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    /* Full-width content area below menu */
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Boards stack one by one */
+    .board-block {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Cards stack one by one */
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Input fields and buttons for better alignment on mobile */
+    .add-board-block {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #newBoardText, #add-board-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* For smaller mobile devices like iPhone SE (375px width) */
+@media (max-width: 375px) {
+    .header {
+        font-size: medium;
+    }
+
+    #newBoardText, #add-board-btn {
+        font-size: small;
+        padding: 10px;
+    }
+}
+
+/* For very small mobile screens like older iPhone models (320px width) */
+@media (max-width: 320px) {
+    .header {
+        font-size: small;
+    }
+
+    #newBoardText, #add-board-btn {
+        font-size: small;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: large;
+    }
+
+    #newBoardText {
+        font-size: 14px;
+    }
+
+    #add-board-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #removeBoards {
+        font-size: 12px;
+        flex-shrink: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-card {
+        width: 45%;
+    }
+
+    .add-board-block {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.task-list {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+#menuList{
+    
+    padding:0;
+    margin-left:10px;
+    margin-right:10px;
+    
+    
+}
+
+#menuList li {
+
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+    flex-wrap: wrap;
+    overflow:hidden;
+    
+}
+
+#menuList li:hover {
+    background-color: rgb(148, 137, 137);
+    cursor: pointer;
+}
+.hidden{
+    display:none;
+}
+#menuList li::before {
+    content: "•";          
+    color: white;       
+    font-size: 20px; 
+    margin-left:35px;     
+    margin-right: 10px;     
+    position: absolute;     
+    left: 0;                 
+}
+
