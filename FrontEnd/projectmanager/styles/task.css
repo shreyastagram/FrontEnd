@@ -1,3 +1,43 @@
-.container{
-    margin-top:87px;
+#container{
+    width:64%;
+    background-color: rgb(231, 231, 231);;
+    padding-bottom:1%;    
+}
+.header {
+    background-color: #186CA3;
+    color: white;
+    width: 100%;
+    padding: 1%;
+    border-bottom: 2px solid black;
+    font-size: x-large;
+
+    
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    
+}
+#taskList{
+    background-color: white;
+    padding:2%;
+    margin:12px 0;
+    border-radius:7px;
+    
+}
+.card-name{
+    background-color: rgb(231, 231, 231);; ;
+    padding:10px 0;
+    border-radius:7px;
+    
+}
+.task-container{
+    background-color: white;
+    padding:2%;
+    justify-content: space-evenly;
+    border-radius:7px;
+}
+.task-container .row {
+    margin-bottom:2%;
 }
