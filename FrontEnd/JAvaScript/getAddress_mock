@@ -1,23 +1,33 @@
 //Promises as a solution to Callback-Hell
 
-const getAddress=()=>{
-    getContinents.then(continent=>{
-        return getCountries(continent);
-    },error=>{
-        console.log(new Error(error));
-    }).then(country=>{
-        return getStates(country);
-    },error=>{
-        console.log(new Error(error));
-    }).then(state=>{
-        return getCities(state);
-    },error=>{
-        console.log(new Error(error));
-    }).then(()=>{
-        return done();
-    },error=>{
-        console.log(new Error(error));
-    });
+// const getAddress=()=>{
+//     getContinents.then(continent=>{
+//         return getCountries(continent);
+//     },error=>{
+//         console.log(new Error(error));
+//     }).then(country=>{
+//         return getStates(country);
+//     },error=>{
+//         console.log(new Error(error));
+//     }).then(state=>{
+//         return getCities(state);
+//     },error=>{
+//         console.log(new Error(error));
+//     }).then(()=>{
+//         return doone();
+//     },error=>{
+//         console.log(new Error(error));
+//     });
+// }
+
+//getAddress using async
+
+const getAddress=async ()=>{
+    let continent=await getContinents;
+    let country=await getCountries(continent);
+    let state=await getStates(country);
+    let city=await getCities(state);
+    doone();
 }
 
 const getContinents=new Promise((resolve,reject)=>{
@@ -59,7 +69,7 @@ const getCities=(state)=>{
     });
 }
 
-const done=()=>{
+const doone=()=>{
     console.log("DONE!");
 };
 getAddress();
